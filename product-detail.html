@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/product-detail.css">
+    <link rel="stylesheet" href="./css/loader.css">
+
+    <link rel="stylesheet" href="./css/product-detail/show-preview.css">
+    <link rel="stylesheet" href="./css/product-detail/product-sub-menu.css">
+   
+
+
+
+     <!-- Link -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+     />
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <!-- Notification -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body onload="loading()">
+    <div class="loader" id="loader"></div>
+    <div class="load-page" id="load-page">
+        <header>
+            <div class="top-bar">
+                <div class="top-bar-container">
+                    <div class="top-bar-left">
+                        <div class="email-contact">
+                            <i class="fa fa-envelope"></i>
+                            <p>
+                                hello@colorlib.com
+                            </p>
+        
+                        </div>
+                        <p>|</p>
+                        <p>Free Shipping for all Order of $99</p>
+    
+    
+                        
+                    </div>
+    
+                    <div class="top-bar-right">
+                        <div class="social-contact">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-pinterest-p"></i>
+    
+                        </div>
+                        <div class="lang-choose">
+                            <img src="./img/language.png" alt="" srcset="">
+                            <select name="lang" id="lang">
+                                <option value="English">
+                                    English
+                                </option>
+                                <option value="Thai">Thai</option>
+                             
+                            </select>
+                        </div>
+    
+                        <div class="login">
+                            <i class="fa fa-user"></i>
+                            <p>Login</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="navbar" id="navbar">
+                <div class="navbar-container">
+                    <div class="logo">
+                        <a href="./index.html"> <img src="./img/logo.png" alt="" srcset=""></a>     
+                    </div>
+    
+                    <ul class="middle-menu">
+                        <li onclick="NavMenuClick(0)">
+                            <a href="./index.html">home</a>
+                        </li>
+    
+                        <li onclick="NavMenuClick(1)">
+                            <a href="./shop.html">shop</a>
+                        </li>
+    
+                        <li onclick="NavMenuClick(2)">
+                            <a href="./shoping-cart.html">cart</a>
+                        </li>
+    
+                        <li>
+                            <a>blog</a>
+                        </li>
+    
+                        <li>
+                            <a>contact</a>
+                        </li>
+                    </ul>
+    
+                    <div class="right-menu">
+                        <div class="cart">
+                        
+                            <a href="./shoping-cart.html" class="check-out"> <i class="fa fa-shopping-cart"><span class="cart-score" id="cart-score">0</span></i></a>
+                     
+                        </div>
+    
+                        <div class="price">
+                            <p>item: </p>
+                            <span class="total-price" id="total-price">$0.00</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="nav-humbager-bar"  onclick="side_bar_click()">
+                        <i class="fa fa-bars" id="humbager-bar"></i>
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="search-bar">
+                <div class="search-bar-container">
+                    <div class="search-btn-left">
+                        <div class="search-btn" id="search-btn">
+                            <div class="div">
+    
+                            </div>
+                            <div class="title">
+                                <i class="fa fa-bars"></i>
+                                <span>All departments</span>
+                            </div>
+                        
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="not-active">
+                            <li><a href="">Fresh Meat</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Fruit & Nut Gifts</a></li>
+                            <li><a href="">Fresh Berries</a></li>
+                            <li><a href="">Ocean Foods</a></li>
+                            <li><a href="">Butter & Eggs</a></li>
+                            <li><a href="">Fastfood</a></li>
+                            <li><a href="">Fresh Onion</a></li>
+                            <li><a href="">Papayaya & Crisps</a></li>
+                            <li><a href="">Oatmeal</a></li>
+                            <li><a href="">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+
+ 
+              
+                   
+                    <div class="search-btn-middle">
+                        <div class="search-btn-border">
+                            <div class="search-categorie">
+                                <span>All Categories</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <input type="input" placeholder="What do you need ?">
+                           
+                        </div>
+                        <input type="submit" value="search">
+                    </div>
+                  
+    
+                    <div class="search-btn-right">
+                        <div class="search-contact">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="search-phone">
+                            <h2>+65 11.188.888</h2>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                    
+ 
+                </div>
+            </div>
+
+
+
+            <!-- side bar open -->
+
+            <!-- Sidebar -->
+            <div class="nav-side-bar-close" id="nav-side-bar">
+                <div class="side-bar-container">
+
+                    <div class="side-bar-header">
+                        <a href="./index.html"> <img src="./img/logo.png" alt="" srcset=""></a>     
+                    </div>
+
+                    <div class="side-bar-display">
+                        <div class="display-top">
+                       
+                            <div class="cart">
+                                
+                                <a href="./shoping-cart.html" class="check-out"> <i class="fa fa-shopping-cart"><span class="cart-score" id="side-cart-score">0</span></i></a>
+                         
+                            </div>
+        
+                            <div class="price">
+                                <p>item: </p>
+                                <span class="total-price" id="side-total-price">$0.00</span>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="display-buttom">
+                            <div class="lang-choose">
+                                <img src="./img/language.png" alt="" srcset="">
+                                <select name="lang" id="lang">
+                                    <option value="English">
+                                        English
+                                    </option>
+                                    <option value="Thai">Thai</option>
+                                 
+                                </select>
+                            </div>
+        
+                            <div class="display-login">
+                                <i class="fa fa-user"></i>
+                                <p>Login</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="side-bar-menu">
+                        
+                        <ul>
+                            <li onclick="NavMenuClick(0)">
+                                <a href="./index.html">home</a>
+                            </li>
+        
+                            <li onclick="NavMenuClick(1)">
+                                <a href="./shop.html">shop</a>
+                            </li>
+        
+                            <li onclick="NavMenuClick(2)">
+                                <a href="./shoping-cart.html">cart</a>
+                            </li>
+        
+                            <li>
+                                <a>blog</a>
+                            </li>
+        
+                            <li>
+                                <a>contact</a>
+                            </li>
+                        </ul>
+        
+                    </div>
+
+
+                    <div class="side-bar-footer">
+                        <div class="social-contact">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-pinterest-p"></i>
+    
+                        </div>
+
+                        <div class="email-contact">
+                            <div class="contact">
+                                <i class="fa fa-envelope"></i>
+                                <p>
+                                    hello@colorlib.com
+                                </p>
+            
+                            </div>
+                         
+                            <p>Free Shipping for all Order of $99</p>
+        
+                        </div>
+                    </div>
+
+               
+
+                </div>
+            </div>
+            
+            <!-- Overlay -->
+            <div class="side-overlay" onclick="side_bar_close()"  id="myOverlay"></div>
+  
+
+
+      
+        </header>
+
+    
+    
+        <section>
+            <div class="shop-banner">
+                <div class="shop-banner-container">
+                    <h1>Organi Shop</h1>
+                    <span><a href="">Home</a>- Product Detail</span>
+                </div>
+            </div>
+    
+            <div class="main-product-detail">
+                <div class="product-detail-container">
+                    <div class="product-img-preview">
+                        <div class="product-main-img">
+                            <img src="./img/product/details/product-details-1.jpg" id="main-img-prev" alt="">
+                        </div>
+    
+                        <div class="img-preview">
+                            <div class="swiper product-preview">
+                                <div class="swiper-wrapper">
+                       
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-1.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-2.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                      
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-3.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                      
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-4.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-1.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-2.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                      
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-3.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                      
+
+                                    <div class="swiper-slide">
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-4.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+                                    </div>
+                      
+                      
+
+                                
+                      
+
+                                    <!-- <div class="product-preview-grid">
+                                        
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-1.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+    
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-2.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+    
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-3.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+    
+                                        <div class="product-preview-item">
+                                            <img src="./img/featured/feature-4.jpg" alt="" onclick="previewImg(this)">
+                                            
+                                        </div>
+    
+                        
+                                    </div> -->
+                                
+                   
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-price-info">
+                        <div class="product-header">
+                            <h1 id="product-detail-name">Vetgetable’s Package</h1>
+    
+                            <div class="star-rate">
+                            </div>
+                        </div>
+    
+                        <div class="product-info">
+                            <h2 id="product-detail-price">$50.00</h2>
+                            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+                        </div>
+    
+                        <div class="product-menu">
+                            <input type="number" id="product-num" value="1">
+                            <input type="button" value="add to cart" onclick="Add_prodcut()">
+                            
+                            <a href="">
+                                <i class="fa fa-heart-o"></i>
+                            </a>
+                          
+                          
+                        </div>
+    
+                        <div class="product-detail">
+                            <ul>
+                                <li>Availability</li>
+                                <li>In Stock</li>
+                                <li>Shipping</li>
+                                <li> 01 day shipping. <span>Free pickup today</span></li>
+                                <li>Weight</li>
+                                <li>0.5 kg</li>
+                                <li>Share on</li>
+                                <li>
+                                    <div class="social">
+                                        <a href="" class="sub-face">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a href="" class="sub-intra">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                        <a href="" class="sub-twit">
+                                            <i class="fa fa-twitter"></i>
+                
+                                        </a>
+                                        <a href="" class="sub-pin">
+                                            <i class="fa fa-pinterest"></i>
+                
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-sub-menu">
+                <div class="product-sub-menu-container">
+                    <div class="product-sub-menu-header">
+                        <ul class="sub-menu">
+                            <li onclick="SubMenuClick(0)"><a class="active">Description</a></li>
+                            <li onclick="SubMenuClick(1)"><a>Infomation</a></li>
+                            <li onclick="SubMenuClick(2)"><a>Review (1)</a></li>
+                        </ul>
+                        <div class="sub-menu-liner">
+    
+                        </div>
+                    </div>
+    
+                    <div class="sub-menu-response">
+                        
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="related-product">
+                <div class="related-product-container">
+                    <h1>Related-Product</h1>
+                    <div class="related-product-show">
+    
+                        <div class="product-show-item">
+                            <img src="./img/featured/feature-1.jpg" alt="">
+                            <p>Crab Pool Security</p>
+                            <span>$30.00</span>
+        
+                            
+                            <div class="product-show-menu">
+        
+                                <div class="detail-menu" onclick="show_detail(0)">
+                                    <i class="fa fa-eye"></i>
+        
+                                </div>
+        
+                                <div class="cart-menu" onclick="fast_add_pro_cart(0)">
+                                    <i class="fa fa-shopping-cart"></i>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+    
+                        <div class="product-show-item">
+                            <img src="./img/featured/feature-2.jpg" alt="">
+                            <p>Crab Pool Security</p>
+                            <span>$30.00</span>
+        
+                            
+                            <div class="product-show-menu">
+    
+                                <div class="detail-menu">
+                                    <i class="fa fa-eye" onclick="show_detail(1)"></i>
+        
+                                </div>
+        
+                                <div class="cart-menu" onclick="fast_add_pro_cart(1)">
+                                    <i class="fa fa-shopping-cart"></i>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+    
+    
+                        <div class="product-show-item">
+                            <img src="./img/featured/feature-3.jpg" alt="">
+                            <p>Crab Pool Security</p>
+                            <span>$30.00</span>
+        
+                            
+                            <div class="product-show-menu">
+    
+                                <div class="detail-menu" onclick="show_detail(2)">
+                                    <i class="fa fa-eye"></i>
+        
+                                </div>
+        
+                                <div class="cart-menu" onclick="fast_add_pro_cart(2)">
+                                    <i class="fa fa-shopping-cart"></i>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+    
+    
+                        <div class="product-show-item">
+                            <img src="./img/featured/feature-4.jpg" alt="">
+                            <p>Crab Pool Security</p>
+                            <span>$30.00</span>
+        
+                            
+                            <div class="product-show-menu">
+        
+                                <div class="detail-menu" onclick="show_detail(3)">
+                                    <i class="fa fa-eye"></i>
+        
+                                </div>
+        
+                                <div class="cart-menu" onclick="fast_add_pro_cart(3)">
+                                    <i class="fa fa-shopping-cart"></i>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </section>
+    
+        <footer>
+            <div class="home-footer">
+                <div class="home-footer-container">
+                    <div class="footer-main-contents">
+                        <div class="home-contact">
+                            <a href=""><img src="./img/logo.png" alt=""></a>
+                            <ul>
+                                <li>Address: 60-49 Road 11378 New York</li>
+                                <li>Phone: +65 11.188.888</li>
+                                <li>Email: hello@colorlib.com</li>
+                            </ul>
+                        </div>
+        
+                        <div class="home-another-link">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="">About us</a></li>
+                                <li><a href="">Who We Are</a></li>
+                                <li><a href="">About Our Shop</a></li>
+                                <li><a href="">Our Services</a></li>
+                                <li><a href="">Secure Shopping</a></li>
+                                <li><a href="">Projects</a></li>
+        
+                                <li><a href="">Delivery infomation</a></li>
+                                <li><a href="">Contact</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Innovation</a></li>
+                                <li><a href="">Our Sitemap</a></li>
+                                <li><a href="">Testimonial</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="home-subcribe">
+                            <div class="subscribe-title">
+                                <h4>Join Our Newsletter Now
+                                </h4>
+                                <span>Get E-mail updates about our latest shop and special offers.
+                                </span>
+                            </div>
+        
+                            <div class="subscribe-email">
+                                <input type="email" placeholder="Enter your Email">
+                                <input type="submit" value="subscribe">
+                            </div>
+        
+                            <div class="subscribe-social">
+                                <a href="" class="sub-face">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="" class="sub-intra">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="" class="sub-twit">
+                                    <i class="fa fa-twitter"></i>
+        
+                                </a>
+                                <a href="" class="sub-pin">
+                                    <i class="fa fa-pinterest"></i>
+        
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer-buttom-contents">
+                       <div class="copy-right">
+                            <span>Copyright ©2023 All rights reserved | This template is made with <i class="fa fa-heart"></i> by 
+                                <a href="">Colorlib</a>
+                            </span>
+                       </div>
+    
+                       <div class="services-payments">
+                            <img src="./img/payment-item.png" alt="">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/search_bar.js"></script>
+
+    <script src="./js/product-detail.js"></script>
+    <script src="./js/loading.js"></script>
+    
+    <script>
+        ResponseData(0)
+        load_Detail()
+        NavtotalPriceShow();
+        genStar()
+        // ดึงข้อมูลตะกล้าสินค้า
+        cart_score.innerHTML = itemArray.length
+        sidebar_cart_score.innerHTML = itemArray.length
+        var swiper = new Swiper(".product-preview", {
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+          },
+
+          
+          breakpoints : {
+
+            1000 : {
+                slidesPerView: 4,
+            } ,
+
+            750 : {
+                slidesPerView: 4,
+            } ,
+
+            0 : {
+                slidesPerView: 3,
+            } ,
+          }
+
+        });
+    </script>
+    
+</body>
+</html>

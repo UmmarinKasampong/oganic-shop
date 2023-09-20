@@ -1,0 +1,176 @@
+.shop-banner {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+    padding: 45px 0 40px;
+
+    background: url(../img/blog/details/details-hero.jpg) no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}
+
+
+
+.shop-banner-container {
+    max-width: 1170px;
+    height: auto;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+
+.shop-banner-container h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.shop-banner-container span {
+    margin-top: 10px;
+    color: #ffff;
+}
+
+.shop-banner-container span a {
+    color: #ffff;
+    font-weight: 700;
+}
+
+
+
+
+/* related-product */ 
+
+
+.related-product {
+    width: 100%;
+    height: auto;
+}
+
+
+.related-product-container {
+    max-width: 1170px;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+.related-product-container h1 {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+
+.related-product-show {
+    display: grid;
+    grid-template-columns: repeat(4 , auto);
+}
+
+
+
+/* product-show-item  */
+
+
+.product-show-item {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    animation: grid-item-open 1s;
+}
+
+
+.product-show-item p {
+    margin: 20px 0;
+}
+
+.product-show-item span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.product-show-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    top: 280px;
+    right: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: top 1s ,
+                opacity 1.2s;
+
+}
+
+.product-show-item:hover .product-show-menu {
+    top: 210px;
+    opacity: 1;
+    transition: top 1s ,
+    opacity 1.2s;
+}
+
+.detail-menu , .cart-menu {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+
+  
+    transition: background-color 1s ,
+                color 1.5s;
+}
+
+
+.detail-menu:hover , .cart-menu:hover {
+
+    background-color: red;
+    color: #fff;
+
+    transition: background-color 1s ,
+                color 1.5s;
+
+}
+
+
+@media only screen and (max-width : 992px){
+    .related-product-container {
+        padding: 0 2rem;
+    }
+    
+    .related-product-show {
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+        row-gap: 30px;
+    }
+    
+        
+}
+    
+    
+    
+@media only screen and (max-width : 600px){
+    .related-product-show {
+        display: grid;
+        grid-template-columns: auto;
+
+        row-gap: 30px;
+    }
+    
+
+}
+    
+    

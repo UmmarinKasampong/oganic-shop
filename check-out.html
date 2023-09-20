@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+      <!-- Css -->
+      <link rel="stylesheet" href="./css/header.css">
+      <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/check-out.css">
+    <link rel="stylesheet" href="./css/loader.css">
+       <!-- Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body onload="loading()">
+    <div class="loader" id="loader"></div>
+    <div class="load-page" id="load-page">
+        <header>
+            <div class="top-bar">
+                <div class="top-bar-container">
+                    <div class="top-bar-left">
+                        <div class="email-contact">
+                            <i class="fa fa-envelope"></i>
+                            <p>
+                                hello@colorlib.com
+                            </p>
+        
+                        </div>
+                        <p>|</p>
+                        <p>Free Shipping for all Order of $99</p>
+    
+    
+                        
+                    </div>
+    
+                    <div class="top-bar-right">
+                        <div class="social-contact">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-pinterest-p"></i>
+    
+                        </div>
+                        <div class="lang-choose">
+                            <img src="./img/language.png" alt="" srcset="">
+                            <select name="lang" id="lang">
+                                <option value="English">
+                                    English
+                                </option>
+                                <option value="Thai">Thai</option>
+                             
+                            </select>
+                        </div>
+    
+                        <div class="login">
+                            <i class="fa fa-user"></i>
+                            <p>Login</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="navbar" id="navbar">
+                <div class="navbar-container">
+                    <div class="logo">
+                        <a href="./index.html"> <img src="./img/logo.png" alt="" srcset=""></a>     
+                    </div>
+    
+                    <ul class="middle-menu">
+                        <li onclick="NavMenuClick(0)">
+                            <a href="./index.html">home</a>
+                        </li>
+    
+                        <li onclick="NavMenuClick(1)">
+                            <a href="./shop.html">shop</a>
+                        </li>
+    
+                        <li onclick="NavMenuClick(2)">
+                            <a href="./shoping-cart.html">cart</a>
+                        </li>
+    
+                        <li>
+                            <a>blog</a>
+                        </li>
+    
+                        <li>
+                            <a>contact</a>
+                        </li>
+                    </ul>
+    
+                    <div class="right-menu">
+                        <div class="cart">
+                        
+                            <a href="./shoping-cart.html" class="check-out"> <i class="fa fa-shopping-cart"><span class="cart-score" id="cart-score">0</span></i></a>
+                     
+                        </div>
+    
+                        <div class="price">
+                            <p>item: </p>
+                            <span class="total-price" id="total-price">$0.00</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="nav-humbager-bar"  onclick="side_bar_click()">
+                        <i class="fa fa-bars" id="humbager-bar"></i>
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="search-bar">
+                <div class="search-bar-container">
+                    <div class="search-btn-left">
+                        <div class="search-btn" id="search-btn">
+                            <div class="div">
+    
+                            </div>
+                            <div class="title">
+                                <i class="fa fa-bars"></i>
+                                <span>All departments</span>
+                            </div>
+                        
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="not-active">
+                            <li><a href="">Fresh Meat</a></li>
+                            <li><a href="">Vegetables</a></li>
+                            <li><a href="">Fruit & Nut Gifts</a></li>
+                            <li><a href="">Fresh Berries</a></li>
+                            <li><a href="">Ocean Foods</a></li>
+                            <li><a href="">Butter & Eggs</a></li>
+                            <li><a href="">Fastfood</a></li>
+                            <li><a href="">Fresh Onion</a></li>
+                            <li><a href="">Papayaya & Crisps</a></li>
+                            <li><a href="">Oatmeal</a></li>
+                            <li><a href="">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+
+ 
+              
+                   
+                    <div class="search-btn-middle">
+                        <div class="search-btn-border">
+                            <div class="search-categorie">
+                                <span>All Categories</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <input type="input" placeholder="What do you need ?">
+                           
+                        </div>
+                        <input type="submit" value="search">
+                    </div>
+                  
+    
+                    <div class="search-btn-right">
+                        <div class="search-contact">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="search-phone">
+                            <h2>+65 11.188.888</h2>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                    
+ 
+                </div>
+            </div>
+
+
+
+            <!-- side bar open -->
+
+            <!-- Sidebar -->
+            <div class="nav-side-bar-close" id="nav-side-bar">
+                <div class="side-bar-container">
+
+                    <div class="side-bar-header">
+                        <a href="./home.html"> <img src="./img/logo.png" alt="" srcset=""></a>     
+                    </div>
+
+                    <div class="side-bar-display">
+                        <div class="display-top">
+                       
+                            <div class="cart">
+                                
+                                <a href="./shoping-cart.html" class="check-out"> <i class="fa fa-shopping-cart"><span class="cart-score" id="side-cart-score">0</span></i></a>
+                         
+                            </div>
+        
+                            <div class="price">
+                                <p>item: </p>
+                                <span class="total-price" id="side-total-price">$0.00</span>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="display-buttom">
+                            <div class="lang-choose">
+                                <img src="./img/language.png" alt="" srcset="">
+                                <select name="lang" id="lang">
+                                    <option value="English">
+                                        English
+                                    </option>
+                                    <option value="Thai">Thai</option>
+                                 
+                                </select>
+                            </div>
+        
+                            <div class="display-login">
+                                <i class="fa fa-user"></i>
+                                <p>Login</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="side-bar-menu">
+                        
+                        <ul>
+                            <li onclick="NavMenuClick(0)">
+                                <a href="./home.html">home</a>
+                            </li>
+        
+                            <li onclick="NavMenuClick(1)">
+                                <a href="./shop.html">shop</a>
+                            </li>
+        
+                            <li onclick="NavMenuClick(2)">
+                                <a href="./shoping-cart.html">cart</a>
+                            </li>
+        
+                            <li>
+                                <a>blog</a>
+                            </li>
+        
+                            <li>
+                                <a>contact</a>
+                            </li>
+                        </ul>
+        
+                    </div>
+
+
+                    <div class="side-bar-footer">
+                        <div class="social-contact">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-pinterest-p"></i>
+    
+                        </div>
+
+                        <div class="email-contact">
+                            <div class="contact">
+                                <i class="fa fa-envelope"></i>
+                                <p>
+                                    hello@colorlib.com
+                                </p>
+            
+                            </div>
+                         
+                            <p>Free Shipping for all Order of $99</p>
+        
+                        </div>
+                    </div>
+
+               
+
+                </div>
+            </div>
+            
+            <!-- Overlay -->
+            <div class="side-overlay" onclick="side_bar_close()"  id="myOverlay"></div>
+  
+
+
+      
+        </header>
+
+    
+    
+        <section>
+            <div class="check-out-container">
+                <div class="check-out-header">
+                    <h1>Billing Details</h1>
+                </div>
+    
+                <div class="check-out-info">
+                    <div class="billing-detail">
+               
+                        <form class="costomer-form">
+                            <div class="form-item-group form-flex">
+                                <div class="form-item">
+                                    <label for="first-name">First Name <b class="fill-dot">*</b></label>
+                                    <input type="text" id="first-name">
+                                </div>
+        
+                                <div class="form-item">
+                                    <label for="last-name">Last Name <b class="fill-dot">*</b></label>
+                                    <input type="text" id="last-name">
+                                </div>
+                                
+                            </div>
+        
+                            <div class="form-item-group">
+                                <div class="form-item">
+                                    <label for="country">Country <b class="fill-dot">*</b></label>
+                                    <input type="text" id="country">
+                                </div>
+        
+                                <div class="form-item">
+                                    <label>Address <b class="fill-dot">*</b></label>
+                                    <input type="text" id="street-address" placeholder="Street Address">
+                                    <input type="text" id="house-type" placeholder="Apartment , suite , unite ect (optinal)">
+                                </div>
+                                
+                            </div>
+        
+                            <div class="form-item-group">
+                                <div class="form-item">
+                                    <label for="town-city">Town / City <b class="fill-dot">*</b></label>
+                                    <input type="text" id="town-city">
+                                </div>
+        
+                                <div class="form-item">
+                                    <label for="country-state">Country / State <b class="fill-dot">*</b></label>
+                                    <input type="text" id="country-state">
+                                  
+                                </div>
+                                
+                            </div>
+        
+                            <div class="form-item-group form-flex">
+                          
+                                <div class="form-item">
+                                    <label for="phone">Phone <b class="fill-dot">*</b></label>
+                                    <input type="text" id="phone">
+                                  
+                                </div>
+        
+                                <div class="form-item">
+                                    <label for="email">Email <b class="fill-dot">*</b></label>
+                                    <input type="email" id="email">
+                                </div>
+        
+                                
+                            </div>
+        
+                            <div class="form-item-group">
+                          
+                                <div class="form-item">
+                                    <label for="notes">Order notes</label>
+                                    <input type="text" id="notes" placeholder="Notes about your order">
+                                  
+                                </div>
+                    
+                            </div>
+        
+                        </form>
+                 
+                    </div>
+        
+        
+                    <div class="summary-order">
+                    
+                            <div class="summary-card">
+                                <div class="card-header">
+                                    <h1>Your Order</h1>
+                                </div>
+        
+                                <div class="card-product-summary">
+                                    <ul>
+              
+                                    </ul>
+                                </div>
+        
+                                <div class="card-price">
+                                    <ul>
+                                        <div class="sub-total">
+                                            <li>Subtotal</li>
+                                            <li id="sub-total">$750.00</li>
+                                        </div>
+    
+                                        <div class="tax">
+                                            <li>Tax</li>
+                                            <li id="tax">7%</li>
+                                        </div>
+    
+                                        <div class="total">
+                                            <li>Total</li>
+                                            <li id="total">$750.00</li>
+                                        </div>
+                                     
+                                    </ul>
+                                </div>
+        
+                                <div class="card-payments">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iusto obcaecati, impedit quos harum eos!</p>
+        
+                                </div>
+        
+                                <input type="button" value="place order" onclick="check_out()">
+                            </div>
+                    
+                    </div>
+                </div>
+                
+    
+            </div>
+          
+        </section>
+    
+        
+        <footer>
+            <div class="home-footer">
+                <div class="home-footer-container">
+                    <div class="footer-main-contents">
+                        <div class="home-contact">
+                            <a href=""><img src="./img/logo.png" alt=""></a>
+                            <ul>
+                                <li>Address: 60-49 Road 11378 New York</li>
+                                <li>Phone: +65 11.188.888</li>
+                                <li>Email: hello@colorlib.com</li>
+                            </ul>
+                        </div>
+        
+                        <div class="home-another-link">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="">About us</a></li>
+                                <li><a href="">Who We Are</a></li>
+                                <li><a href="">About Our Shop</a></li>
+                                <li><a href="">Our Services</a></li>
+                                <li><a href="">Secure Shopping</a></li>
+                                <li><a href="">Projects</a></li>
+        
+                                <li><a href="">Delivery infomation</a></li>
+                                <li><a href="">Contact</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Innovation</a></li>
+                                <li><a href="">Our Sitemap</a></li>
+                                <li><a href="">Testimonial</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="home-subcribe">
+                            <div class="subscribe-title">
+                                <h4>Join Our Newsletter Now
+                                </h4>
+                                <span>Get E-mail updates about our latest shop and special offers.
+                                </span>
+                            </div>
+        
+                            <div class="subscribe-email">
+                                <input type="email" placeholder="Enter your Email">
+                                <input type="submit" value="subscribe">
+                            </div>
+        
+                            <div class="subscribe-social">
+                                <a href="" class="sub-face">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="" class="sub-intra">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="" class="sub-twit">
+                                    <i class="fa fa-twitter"></i>
+        
+                                </a>
+                                <a href="" class="sub-pin">
+                                    <i class="fa fa-pinterest"></i>
+        
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+       
+                    <div class="footer-buttom-contents">
+                       <div class="copy-right" >
+                            <span>Copyright ©2023 All rights reserved | This template is made with <i class="fa fa-heart"></i> by 
+                                <a href="">Colorlib</a>
+                            </span>
+                       </div>
+    
+                       <div class="services-payments">
+                            <img src="./img/payment-item.png" alt="">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/search_bar.js"></script>
+
+    <script src="./js/check-out.js"></script>
+    <script src="./js/loading.js"></script>
+   <script>
+        NavtotalPriceShow();
+        loadProduct();
+        cart_score.innerHTML = itemArray.length
+        sidebar_cart_score.innerHTML = itemArray.length
+
+        const check_product_cart =()=> {
+            Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+            })
+        }
+   </script>
+</body>
+</html>

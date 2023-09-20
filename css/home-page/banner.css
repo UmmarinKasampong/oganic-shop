@@ -1,0 +1,117 @@
+
+
+
+.banner {
+    margin-top: 2rem;
+    /* max-width: 100%; */
+    height: auto;
+
+   
+}
+
+
+
+.banner-container {
+    max-width: 1170px;
+    height: auto;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+    
+}
+
+.banner-hidden {
+    width: 30%;
+  
+    background: blue;
+}
+
+
+.banner-contents {
+    width: 70%;
+    height: 400px;
+
+    /* position: relative; */
+    background: url(../../img/hero/banner.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+.banner-info {
+    padding: 3rem;
+    margin-top: 10px;
+    width: 320px;
+    height: auto;
+
+}
+
+.banner-info p {
+    font-size: 14px;
+    color: #7fad39;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.banner-info h1 {
+    margin: 10px 0;
+    font-weight: 700;
+    line-height: 52px;
+    color: #252525;
+    font-size: 46px;
+}
+
+.banner-info span {
+    font-size: 16px;
+    color: #6f6f6f;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+}
+
+.banner-info input {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 28px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #7fad39;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    /* .banner {
+        display: inline-block;
+    } */
+
+    .banner-container {
+        flex-direction: column;
+        padding: 0 2rem;
+      
+    }
+    .banner-hidden {
+        display: none;
+    }
+
+    .banner-contents {
+        width: 100%;
+        display: block;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+}

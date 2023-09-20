@@ -1,0 +1,273 @@
+section { 
+    margin: 65px 0;
+
+}
+
+.check-out-container {
+    max-width: 1170px;
+    height: auto;
+
+    margin: 0 auto;
+
+
+}
+
+.check-out-info {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-out-header {
+   
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.check-out-header h1 {
+    font-weight: 800;
+}
+
+
+
+input[type='text'] , input[type='email'] {
+    padding: 0 10px;
+    font-size: 16px;
+    height: 45px;
+    outline: none;
+    border-radius: 4px;
+    color: #b2b2b2;
+    border: 1px solid #d3c1c1;
+}
+
+
+label {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* billing-detail */
+
+
+.billing-detail {
+
+    width: 600px;
+    height: auto;
+    margin-top: 30px;
+
+}
+
+.costomer-form {
+    max-width: 100%;
+}
+
+.form-item-group {
+    margin: 20px 0;
+}
+
+.form-item-group:nth-child(2) .form-item  , .form-item-group:nth-child(3) .form-item {
+    margin: 0 0 20px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-flex .form-item {
+    width: 45%;
+}
+
+.form-flex .form-item input {
+    max-width: 100%;
+
+}
+
+#house-type {
+    margin: 20px 0 0 ;
+}
+
+
+.form-item label {
+    display: block;
+}
+
+.form-item input {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* summary-order */
+
+.summary-order {
+    margin-top: 30px;
+    max-width: 450px;
+    height: auto;
+    display: block;
+}
+
+
+.summary-card {
+
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+
+.card-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0 0 20px;
+    
+}
+
+.card-header h1 {
+    font-weight: 800;
+}
+
+
+
+.card-product-summary , .sub-total , .total , .tax{
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 15px;
+    margin: 0 0 20px;
+}
+
+.card-product-summary ul {
+    display: grid;
+    grid-template-columns: repeat( 2 , 320px);
+}
+
+.card-product-summary ul li {
+    margin-bottom: 15px;
+}
+
+.sub-header {
+    font-weight: 800;
+}
+
+.pro-name , .value-price {
+    color: #6f6f6f;
+    font-size: 14px;
+}
+
+.value-price {
+    font-weight: 800;
+}
+
+
+
+
+.sub-total , .total , .tax {
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    color: red;
+} 
+
+
+.card-payments p {
+    line-height: 30px;
+    color: #6f6f6f;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+
+.summary-card input[type="button"] {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #7fad39;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 800;
+}
+
+.fill-dot {
+    color: red;
+}
+
+
+
+
+
+@media only screen and (max-width : 1200px){
+    .check-out-container {
+        padding: 0 2rem;
+    }
+
+    .form-flex {
+       flex-direction: column;
+    }
+    
+
+    .form-flex .form-item:nth-child(1) {
+        
+        margin-bottom: 20px;
+    }
+
+    
+    .billing-detail ,  .summary-order  {
+        
+        max-width: 45%;
+  
+
+    }
+
+
+    .card-product-summary ul {
+ 
+        grid-template-columns: repeat( 2 , 82%);
+    }
+
+        
+    .form-flex .form-item {
+        
+        width: 100%;
+    }
+        
+}
+
+
+@media only screen and (max-width : 850px){
+    
+    .check-out-info {
+        flex-direction: column;
+    }
+
+    .billing-detail ,  .summary-order  {
+        
+        max-width: 100%;
+  
+
+    }
+
+    
+    .card-product-summary ul {
+ 
+        grid-template-columns: repeat( 2 , 90%);
+    }
+
+
+    .form-flex .form-item input{
+     
+        width: 100%;
+    
+    }
+
+
+}
