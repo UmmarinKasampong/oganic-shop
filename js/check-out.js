@@ -70,7 +70,7 @@ const check_out =()=> {
             localStorage.removeItem("items-cart")
             // NavtotalPriceShow()
             // cart_score.innerHTML = itemArray.length
-            window.location = '../home.html'
+            window.location = '../index.html'
         })
     }else {
         Swal.fire({
