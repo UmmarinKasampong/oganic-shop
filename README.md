@@ -25,3 +25,8 @@ This Web have a little bit Feature such as
 
 **Libary:** swiper and SweetAlert2
 
+
+## Preview
+
+ - [Oganic shop](https://oganic-shop.onrender.com)
+
